@@ -13,11 +13,16 @@ def verifie(l):
 #exo2
 
 def depouille(votes : list):
-    res={"A":2, "B":8}
-    print(res.keys())
+    res={}
+
     for i in range (0, len(votes)):
-        print(votes[i] in res.keys())
-        
-        print(votes[i])
+        if votes[i] not in res.keys():
+            res[votes[i]]=1
+        else:
+            res[votes[i]]+=1
+
+    return res
+
+
        
-depouille(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B'])
+print(depouille(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']))
