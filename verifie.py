@@ -16,6 +16,8 @@ def depouille(votes : list):
     res={"A":2, "B":8}
     print(res.keys())
     for i in range (0, len(votes)):
+        print(votes[i] in res.keys())
+        
         print(votes[i])
        
 depouille(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B'])
