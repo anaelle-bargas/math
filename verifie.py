@@ -23,6 +23,7 @@ def depouille(votes : list):
 
     return res
 
-
+def vainqueur(res):
+    
        
 print(depouille(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']))
