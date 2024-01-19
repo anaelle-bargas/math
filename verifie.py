@@ -14,10 +14,33 @@ def verifie(l):
 
 def depouille(votes : list):
     res={}
-    print(res.keys())
+
     for i in range (0, len(votes)):
-        if(votes[i] not in res.keys()):
+        if votes[i] not in res.keys():
             res[votes[i]]=1
-        print(votes[i], votes[i] in res.keys())
+        else:
+            res[votes[i]]+=1
+
+    return res
+
+def vainqueur(res):
+    contenu = res.items()
+    max = [0]
+    print(contenu)
+    imax = [0]
+    for i, j in res.items():
+        if j > max[0]:
+            max = [j]
+            imax = [i]
+        elif j == max[0]:
+            max.append(j)
+            imax.append(i)
+    vainqueur={}
+    for i in range(0, len(max)):
+        vainqueur[imax[i]] =max[i]
+
+
+    return vainqueur
+
        
-depouille(['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B'])
+print(vainqueur(depouille(['A', 'A', 'A', 'B', 'C', 'C', 'B', 'C'])))
