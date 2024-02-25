@@ -33,4 +33,7 @@ def A2():
 
 
 
-print(A2())
+# print(A2())
+for i in range(0, 4):
+    print(i)
+    i+=3
